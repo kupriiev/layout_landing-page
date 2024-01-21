@@ -1,0 +1,21 @@
+@mixin tabletMedia {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin hover($property, $toValue) {
+  transition: #{$property} 0.3s;
+
+  &:hover {
+    #{$property}: $toValue;
+  }
+}
+
+@mixin contentPaddingInline {
+  padding-inline: 20px;
+
+  @include tabletMedia {
+    padding-inline: 72px;
+  }
+}

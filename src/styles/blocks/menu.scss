@@ -1,0 +1,48 @@
+.menu {
+  background-color: $menu-bg-color;
+  font-weight: 700;
+  overflow: auto;
+  pointer-events: none;
+
+  &__top {
+    margin-bottom: 32px;
+
+    @include tabletMedia {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__content {
+    @include contentPaddingInline;
+  }
+
+  &__nav {
+    margin-bottom: 48px;
+  }
+
+  &__phone-number {
+    color: inherit;
+    display: block;
+    font-family: $ff-heading;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 140%;
+    margin-bottom: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__call-to-order {
+    border-bottom: 1px solid $text-color;
+    color: inherit;
+    display: block;
+    font-family: $ff-heading;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 140%;
+    padding-bottom: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+}

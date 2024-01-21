@@ -1,0 +1,31 @@
+.top-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 24px;
+  @include contentPaddingInline;
+  @include tabletMedia {
+    padding-block: 32px;
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo-img {
+    height: 16px;
+    width: 125px;
+
+    @include tabletMedia {
+      height: 24px;
+      width: 172px;
+    }
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+  }
+}

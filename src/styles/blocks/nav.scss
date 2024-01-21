@@ -1,0 +1,38 @@
+.nav {
+  font-family: $ff-heading;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: 22px;
+    letter-spacing: 2px;
+    line-height: 22px;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      background-color: $text-color;
+      bottom: -4px;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      transform: scale(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+      width: 100%;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
+  }
+}
